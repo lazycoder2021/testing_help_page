@@ -1,0 +1,570 @@
+﻿
+<!DOCTYPE html>
+<html dir="ltr" lang="en-US">
+<head>
+    <meta charset="utf-8" />
+    <!-- v21864 -->
+
+    <title>Test Title &ndash; VWO</title>
+
+    <meta name="csrf-param" content="authenticity_token" />
+    <meta name="csrf-token" content="" />
+
+    <meta name="description" content="Many customers use VWO to manage multiple domains and prefer to keep each website under a different sub-account. By default, the visitor..." />
+    <meta property="og:image" content="https://theme.zdassets.com/theme_assets/2032116/f1389e984f800816651fd6fe296b32ed4940983a.svg" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="VWO" />
+    <meta property="og:title" content="Allocate Visitor to Sub-accounts in VWO" />
+    <meta property="og:description" content="Many customers use VWO to manage multiple domains and prefer to keep each website under a different sub-account. By default, the visitor quota is allocated to the main account, which also gets cons..." />
+    <meta property="og:url" content="https://help.vwo.com/hc/en-us/articles/360019424394-Allocate-Visitor-to-Sub-accounts-in-VWO" />
+    <link rel="canonical" href="https://help.vwo.com/hc/en-us/articles/360019424394-Allocate-Visitor-to-Sub-accounts-in-VWO" />
+    <link rel="alternate" hreflang="en" href="https://help.vwo.com/hc/en-us/articles/360019424394-Allocate-Visitor-to-Sub-accounts-in-VWO" />
+
+    <link rel="stylesheet" media="all" href="//static.zdassets.com/hc/assets/application-1a1175db35230dfa282e711364a74c60.css" id="stylesheet" />
+    <!-- Entypo pictograms by Daniel Bruce — www.entypo.com -->
+    <link rel="stylesheet" media="all" href="//static.zdassets.com/hc/assets/theming_v1_support-e05586b61178dcde2a13a3d323525a18.css" />
+    <link rel="stylesheet" type="text/css" href="//p25.zdassets.com/hc/theming_assets/2032116/114094514233/style.css?digest=10889904415001">
+
+    <link rel="shortcut icon" type="image/x-icon" href="//theme.zdassets.com/theme_assets/2032116/2a5fb5fd37836477b8b979fc6b06502af8811efd.png" />
+
+    <script src="//static.zdassets.com/hc/assets/jquery-09d07e20ce042ef10e301661ad1f316c.js"></script>
+
+
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <!-- Google Tag Manager -->
+    <script>
+(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TWR4CB9');</script>
+    <!-- End Google Tag Manager -->
+    <script type="text/javascript" src="//p25.zdassets.com/hc/theming_assets/2032116/114094514233/script.js?digest=10889904415001"></script>
+</head>
+<body class="">
+
+
+
+
+    <script>
+!function(){if(new URL(window.location).searchParams.get("iframe-view")){document.body.hidden=!0;var e=function(){for(var t,n=[".article-sidebar",".sub-nav","header","footer","body>footer","#article-comments",".article-relatives",".article-subscribe"],o=0;o<n.length;o++)(t=document.querySelector(n[o]))&&t.setAttribute("style","display: none");document.body.hidden=!1,document.removeEventListener("DOMContentLoaded",e)};document.addEventListener("DOMContentLoaded",e)}}();
+    </script>
+    <!-- Start VWO Async SmartCode -->
+    <script type='text/javascript'>
+window._vwo_code = window._vwo_code || (function(){
+var account_id=6,
+settings_tolerance=2000,
+library_tolerance=2500,
+use_existing_jquery=false,
+is_spa=1,
+hide_element='body',
+/* DO NOT EDIT BELOW THIS LINE */
+f=false,d=document,code={use_existing_jquery:function(){return use_existing_jquery;},library_tolerance:function(){return library_tolerance;},finish:function(){if(!f){f=true;var a=d.getElementById('_vis_opt_path_hides');if(a)a.parentNode.removeChild(a);}},finished:function(){return f;},load:function(a){var b=d.createElement('script');b.src=a;b.type='text/javascript';b.innerText;b.onerror=function(){_vwo_code.finish();};d.getElementsByTagName('head')[0].appendChild(b);},init:function(){
+window.settings_timer=setTimeout(function () {_vwo_code.finish() },settings_tolerance);var a=d.createElement('style'),b=hide_element?hide_element+'{opacity:0 !important;filter:alpha(opacity=0) !important;background:none !important;}':'',h=d.getElementsByTagName('head')[0];a.setAttribute('id','_vis_opt_path_hides');a.setAttribute('type','text/css');if(a.styleSheet)a.styleSheet.cssText=b;else a.appendChild(d.createTextNode(b));h.appendChild(a);this.load('https://dev.visualwebsiteoptimizer.com/j.php?a='+account_id+'&u='+encodeURIComponent(d.URL)+'&f='+(+is_spa)+'&r='+Math.random());return settings_timer; }};window._vwo_settings_timer = code.init(); return code; }());
+    </script>
+    <!-- End VWO Async SmartCode -->
+    <!-- Google Tag Manager (noscript) -->
+    <noscript>
+        <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TWR4CB9"
+                height="0" width="0" style="display:none;visibility:hidden"></iframe>
+    </noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <div class="bg-wrapper home-bg-wrapper">
+        <header class="header">
+            <div class="logo">
+                <a href="https://help.vwo.com/hc/en-us" style="display: flex;align-items: center;text-decoration: none;">
+                    <img src="//theme.zdassets.com/theme_assets/2032116/f1389e984f800816651fd6fe296b32ed4940983a.svg" alt="VWO Help Center home page">
+                    <span style="text-transform: uppercase;letter-spacing: 1px;font-weight: 800;margin-left: 10px;font-size: 20px;color: #333;text-decoration: none;">Knowledge Base</span>
+                </a>
+            </div>
+            <div class="header-form" id="js-header-form">
+                <form role="search" class="search search-full" data-search="" data-instant="true" autocomplete="off" action="/hc/en-us/search" accept-charset="UTF-8" method="get"><input name="utf8" type="hidden" value="&#x2713;" autocomplete="off" /><input type="search" name="query" id="query" placeholder="Search" autocomplete="off" aria-label="Search" /></form>
+            </div>
+            <a class="header-button" href="https://vwo.com/free-trial/" target="_blank">Start Free trial</a>
+        </header>
+    </div>
+
+    <main role="main">
+        <div class="container-divider"></div>
+        <div class="container">
+            <nav class="sub-nav">
+                <ol class="breadcrumbs">
+
+                    <li title="VWO">
+
+                        <a href="/hc/en-us">VWO</a>
+
+                    </li>
+
+                    <li title="Getting Started with VWO">
+
+                        <a href="/hc/en-us/categories/360001529093-Getting-Started-with-VWO">Getting Started with VWO</a>
+
+                    </li>
+
+                    <li title="Account Settings">
+
+                        <a href="/hc/en-us/sections/360003518974-Account-Settings">Account Settings</a>
+
+                    </li>
+
+                </ol>
+
+                <form role="search" class="search" data-search="" action="/hc/en-us/search" accept-charset="UTF-8" method="get">
+                    <input name="utf8" type="hidden" value="&#x2713;" autocomplete="off" /><input type="hidden" name="category" id="category" value="360001529093" autocomplete="off" />
+                    <input type="search" name="query" id="query" placeholder="Search" aria-label="Search" />
+                </form>
+            </nav>
+            <div class="article-container" id="article-container">
+                <section class="article-sidebar">
+
+                    <section class="section-articles collapsible-sidebar">
+                        <h3 class="collapsible-sidebar-title sidenav-title">Articles in this section</h3>
+                        <ul>
+
+                            <li>
+                                <a href="/hc/en-us/articles/360021116334-Visitor-Counting-Logic-in-VWO" class="sidenav-item ">Visitor Counting Logic in VWO</a>
+                            </li>
+
+                            <li>
+                                <a href="/hc/en-us/articles/4409648570521-Managing-Two-Factor-Authentication-2FA-in-VWO" class="sidenav-item ">Managing Two-Factor Authentication (2FA) in VWO</a>
+                            </li>
+
+                            <li>
+                                <a href="/hc/en-us/articles/360037880374-Configuring-General-Information-in-VWO" class="sidenav-item ">Configuring General Information in VWO</a>
+                            </li>
+
+                            <li>
+                                <a href="/hc/en-us/articles/360019423094-Understanding-VWO-Account-Hierarchy" class="sidenav-item ">Understanding VWO Account Hierarchy</a>
+                            </li>
+
+                            <li>
+                                <a href="/hc/en-us/articles/360019593433-Adding-Users-and-Sub-Accounts-in-your-VWO-Account" class="sidenav-item ">Adding Users and Sub-Accounts in your VWO Account</a>
+                            </li>
+
+                            <li>
+                                <a href="/hc/en-us/articles/360019424394-Allocate-Visitor-to-Sub-accounts-in-VWO" class="sidenav-item current-article">Allocate Visitor to Sub-accounts in VWO</a>
+                            </li>
+
+                            <li>
+                                <a href="/hc/en-us/articles/360020437034-Configuring-Security-Settings-in-your-VWO-Account" class="sidenav-item ">Configuring Security Settings in your VWO Account</a>
+                            </li>
+
+                            <li>
+                                <a href="/hc/en-us/articles/900003947306-Enable-Users-to-Log-in-to-VWO-From-Specified-IP-Addresses-and-Locations" class="sidenav-item ">Enable Users to Log in to VWO From Specified IP Addresses and Locations</a>
+                            </li>
+
+                            <li>
+                                <a href="/hc/en-us/articles/360019594033-Configuring-Alerts-in-your-VWO-Account" class="sidenav-item ">Configuring Alerts in your VWO Account</a>
+                            </li>
+
+                            <li>
+                                <a href="/hc/en-us/articles/360034891513-How-to-Locate-your-VWO-UUID-" class="sidenav-item ">How to Locate your VWO UUID?</a>
+                            </li>
+
+                        </ul>
+
+                        <a href="/hc/en-us/sections/360003518974-Account-Settings" class="article-sidebar-item">See more &rarr;</a>
+
+
+                    </section>
+
+                </section>
+
+                <article class="article">
+                    <header class="article-header">
+                        <h1 title="Allocate Visitor to Sub-accounts in VWO" class="article-title">
+                            Testing Title On My Own
+
+                        </h1>
+
+                        <div class="article-author">
+
+                            <div class="avatar article-avatar">
+
+                                <img src="https://help.vwo.com/system/photos/900141381603/profile_image_386424131414_2032116.png" alt="" class="user-avatar" />
+                            </div>
+
+                            <div class="article-meta">
+
+
+                                Vaibhav Singh
+
+
+
+                                <ul class="meta-group">
+
+                                    <li class="meta-data">Updated</li>
+                                    <li class="meta-data"><time datetime="2022-08-19T05:32:14Z" title="2022-08-19T05:32:14Z" data-datetime="relative">August 19, 2022 05:32</time></li>
+
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="article-social-media">
+
+                            <span>Share: </span>
+                            <div class="article-share">
+                                <ul class="share">
+                                    <li><a href="https://www.facebook.com/share.php?title=Allocate+Visitor+to+Sub-accounts+in+VWO&u=https%3A%2F%2Fhelp.vwo.com%2Fhc%2Fen-us%2Farticles%2F360019424394-Allocate-Visitor-to-Sub-accounts-in-VWO" class="share-facebook">Facebook</a></li>
+                                    <li><a href="https://twitter.com/share?lang=en&text=Allocate+Visitor+to+Sub-accounts+in+VWO&url=https%3A%2F%2Fhelp.vwo.com%2Fhc%2Fen-us%2Farticles%2F360019424394-Allocate-Visitor-to-Sub-accounts-in-VWO" class="share-twitter">Twitter</a></li>
+                                    <li><a href="https://www.linkedin.com/shareArticle?mini=true&source=VWO&title=Allocate+Visitor+to+Sub-accounts+in+VWO&url=https%3A%2F%2Fhelp.vwo.com%2Fhc%2Fen-us%2Farticles%2F360019424394-Allocate-Visitor-to-Sub-accounts-in-VWO" class="share-linkedin">LinkedIn</a></li>
+                                </ul>
+
+                            </div>
+
+
+                            <a class="article-subscribe" title="Opens a sign-in dialog" rel="nofollow" role="button" data-auth-action="signin" aria-selected="false" href="/hc/en-us/articles/360019424394-Allocate-Visitor-to-Sub-accounts-in-VWO/subscription.html">Follow</a>
+
+                        </div>
+                    </header>
+
+                    <section class="article-info">
+                        <div class="article-content">
+                            <div class="article-body">
+                                <p>Many customers use VWO to manage multiple domains and prefer to keep each website under a different sub-account. By default, the visitor quota is allocated to the main account, which also gets consumed by the sub-accounts. However, you can portion the visitor volume from the main account and allocate them to the sub-accounts, as required.</p>
+                                <div class="callout"><strong>NOTE:</strong> Allocation of visitor quota can be done for all products of VWO, except VWO Engage.</div>
+                                <p>Let us consider that you are running an Insights campaign, where you want to analyze the behavior of the visitors, in the journey towards purchasing a product or signing up for your website. By default, the system allows the visitors to be consumed by all the accounts (main and sub-accounts) on the basis of first-come-first-served. This might cause irregular distribution of visitor quota, which in turn would result in insufficient or exhausted quota for those accounts that require them.</p>
+                                <p>To tackle the situation, you can configure the allocation of visitor quota across all accounts, based on their respective needs.</p>
+                                <div class="callout"><strong>NOTE:&nbsp;</strong>In order to avail the Visitor Allocation feature, your account should have the Enterprise plan enabled for at least one of the products. This feature is made available on-demand, based on your business use case. To get this enabled for your VWO account, get in touch with our support team at support@vwo.com.</div>
+                                <p>On the <span class="wysiwyg-color-cyan110"><strong>ACCOUNTS</strong></span> &gt; <span class="wysiwyg-color-cyan110"><strong>VISITOR</strong> <strong>ALLOCATION</strong></span> page, you can allocate visitors for every sub-account according to the traffic volume and requirements. The account administrator for the main account can create sub-accounts and define visitor traffic allocation for each sub-account.</p>
+                                <div class="callout"><strong>NOTE:</strong> For VWO Insights, the sampling rate will be dynamically adjusted based on the number of visitors you allocate for an account.</div>
+                                <p><img src="/hc/article_attachments/9650136223769/Screenshot_2022-08-17_at_11.22.40_AM.png" alt="Screenshot_2022-08-17_at_11.22.40_AM.png" /></p>
+                                <p>The page displays visitors allocated to the main account and the allocated usage for sub-accounts (if any) for all VWO products (except VWO Engage). It is categorized into three main sections:</p>
+                                <ul>
+                                    <li style="font-weight: 400;"><strong><span class="wysiwyg-color-cyan110">Allocated Usage</span>: </strong><span style="font-weight: 400;">displays the allocated visitor count and actual usage for each sub-account defined for the account. If no sub-accounts are defined, there is no allocation and all accounts remain in the unallocated pool.</span></li>
+                                    <li style="font-weight: 400;"><strong><span class="wysiwyg-color-cyan110">Unallocated usage</span>: </strong><span style="font-weight: 400;">displays the total visitor traffic that is remaining under the main account which has not been allocated for any subaccounts. If you have not allocated visitors to any account, all the accounts will be listed under unallocated usage.</span></li>
+                                    <li style="font-weight: 400;"><strong style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;"><span class="wysiwyg-color-cyan110">Disabled accounts</span>: </strong><span style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;">displays the</span><span style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;"> </span><span style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;">accounts that have been disabled. The number of visitors consumed by the account prior to their disabling is displayed for each account.</span></li>
+                                </ul>
+                                <p><span class="wysiwyg-color-pink120">1. Use the Visitor Allocation option only when it is necessary for your account.<br />2. Do not change the allocation for the VWO Insights quota multiple times, as it may skew your reports. </span></p>
+                                <p><strong>Procedure</strong></p>
+                                <ol>
+                                    <li style="font-weight: 400;"><span style="font-weight: 400;">Log in to your VWO account.</span></li>
+                                    <li style="font-weight: 400;"><span style="font-weight: 400;"><span>Click the gear icon </span><span class="wysiwyg-font-size-x-large"><strong>⚙</strong></span><span> on the top right, and go to</span> <span class="wysiwyg-color-cyan110"><strong>ACCOUNTS</strong></span> &gt; <strong><span class="wysiwyg-color-cyan110">VISITOR ALLOCATION</span></strong><span class="wysiwyg-color-black">.</span></span></li>
+                                    <li style="font-weight: 400;">To allocate visitors to sub-accounts or update existing allocation, click the <span class="wysiwyg-color-cyan110"><strong>Edit Allocation</strong></span> button corresponding to the VWO product for which you want to perform the operation.</li>
+                                    <li style="font-weight: 400;"><span style="font-weight: 400;">Click</span><span class="wysiwyg-color-cyan110"><strong> Allocate Visitors</strong></span><span style="font-weight: 400;"> for each sub-account you wish to allocate visitors to.</span></li>
+                                    <li style="font-weight: 400;"><span style="font-weight: 400;">Use the slider, or enter the traffic percentage or count that you want to allocate for the specific sub-account. </span><strong>For example</strong>,<span style="font-weight: 400;"> if your account has a total of 1,000 visitors, a 20% allocation to a sub-account would mean that 200 visitors are allocated to the subaccount.</span></li>
+                                    <li style="font-weight: 400;"><span style="font-weight: 400;">To remove allocation from a sub-account, click </span><span class="wysiwyg-color-cyan110"><strong>Remove Allocation</strong></span><span style="font-weight: 400;">. If the removed sub-account has already consumed any visitor traffic, the corresponding allocation and usage are displayed.</span></li>
+                                    <li style="font-weight: 400;">To make the changes, click <span class="wysiwyg-color-cyan110"><strong style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;">Save</strong></span><span style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;">.</span></li>
+                                </ol>
+                            </div>
+
+
+
+
+                            <div class="article-attachments">
+                                <ul class="attachments">
+                                </ul>
+                            </div>
+                        </div>
+                    </section>
+
+                    <footer>
+                        <div class="article-footer">
+
+                        </div>
+
+                        <div class="article-votes">
+                            <h3 class="article-votes-question">Was this article helpful?</h3>
+                            <div class="article-votes-controls" role='radiogroup'>
+                                <a class="button article-vote article-vote-up" data-helper="vote" data-item="article" data-type="up" data-id="360019424394" data-upvote-count="4" data-vote-count="4" data-vote-sum="4" data-vote-url="/hc/en-us/articles/360019424394/vote" data-value="null" data-label="4 out of 4 found this helpful" data-selected-class="null" aria-selected="false" role="radio" rel="nofollow" title="Yes" href="#"></a>
+                                <a class="button article-vote article-vote-down" data-helper="vote" data-item="article" data-type="down" data-id="360019424394" data-upvote-count="4" data-vote-count="4" data-vote-sum="4" data-vote-url="/hc/en-us/articles/360019424394/vote" data-value="null" data-label="4 out of 4 found this helpful" data-selected-class="null" aria-selected="false" role="radio" rel="nofollow" title="No" href="#"></a>
+                            </div>
+                            <small class="article-votes-count" hidden>
+                                <span class="article-vote-label" data-helper="vote" data-item="article" data-type="label" data-id="360019424394" data-upvote-count="4" data-vote-count="4" data-vote-sum="4" data-vote-url="/hc/en-us/articles/360019424394/vote" data-value="null" data-label="4 out of 4 found this helpful">4 out of 4 found this helpful</span>
+                            </small>
+                        </div>
+
+
+
+                        <div class="article-return-to-top">
+                            <a href="#article-container">Return to top<span class="icon-arrow-up"></span></a>
+                        </div>
+                    </footer>
+
+                    <section class="article-relatives">
+
+                        <div data-recent-articles></div>
+
+
+
+                        <section class="related-articles">
+
+                            <h3 class="related-articles-title">Related articles</h3>
+
+                            <ul>
+
+                                <li>
+                                    <a href="/hc/en-us/related/click?data=BAh7CjobZGVzdGluYXRpb25fYXJ0aWNsZV9pZGwrCCro49JTADoYcmVmZXJyZXJfYXJ0aWNsZV9pZGwrCIp01NJTADoLbG9jYWxlSSIKZW4tdXMGOgZFVDoIdXJsSSJWL2hjL2VuLXVzL2FydGljbGVzLzM2MDAyMDQzNzAzNC1Db25maWd1cmluZy1TZWN1cml0eS1TZXR0aW5ncy1pbi15b3VyLVZXTy1BY2NvdW50BjsIVDoJcmFua2kG--8249dc7ca60018dc9559312818e95b395f13beaa" rel="nofollow">Configuring Security Settings in your VWO Account</a>
+                                </li>
+
+                                <li>
+                                    <a href="/hc/en-us/related/click?data=BAh7CjobZGVzdGluYXRpb25fYXJ0aWNsZV9pZGwrCGogttNTADoYcmVmZXJyZXJfYXJ0aWNsZV9pZGwrCIp01NJTADoLbG9jYWxlSSIKZW4tdXMGOgZFVDoIdXJsSSI%2FL2hjL2VuLXVzL2FydGljbGVzLzM2MDAzNDIxMzk5NC1Ib3ctU2FtcGxpbmctV29ya3MtaW4tVldPLQY7CFQ6CXJhbmtpBw%3D%3D--ec6a1874fb86959efeba143bf29fa20e3f396940" rel="nofollow">How Sampling Works in VWO?</a>
+                                </li>
+
+                                <li>
+                                    <a href="/hc/en-us/related/click?data=BAh7CjobZGVzdGluYXRpb25fYXJ0aWNsZV9pZGwrCG0Ov9NTADoYcmVmZXJyZXJfYXJ0aWNsZV9pZGwrCIp01NJTADoLbG9jYWxlSSIKZW4tdXMGOgZFVDoIdXJsSSJbL2hjL2VuLXVzL2FydGljbGVzLzM2MDAzNDc5OTIxMy1Ib3ctdG8tSW5jbHVkZS1VUkxzLWZvci1WV08tSW5zaWdodHMtVmlzaXRvci1TYW1wbGluZy0GOwhUOglyYW5raQg%3D--a231940e1cc0d0554dde8165e29f02a1c5377fa5" rel="nofollow">How to Include URLs for VWO Insights Visitor Sampling?</a>
+                                </li>
+
+                                <li>
+                                    <a href="/hc/en-us/related/click?data=BAh7CjobZGVzdGluYXRpb25fYXJ0aWNsZV9pZGwrCNm4stNTADoYcmVmZXJyZXJfYXJ0aWNsZV9pZGwrCIp01NJTADoLbG9jYWxlSSIKZW4tdXMGOgZFVDoIdXJsSSI6L2hjL2VuLXVzL2FydGljbGVzLzM2MDAzMzk5MDg3My1Db29raWVzLVN0b3JlZC1ieS1WV08GOwhUOglyYW5raQk%3D--5cd992625a7b90ee3eef8f1fd63bbe9ed104ec1f" rel="nofollow">Cookies Stored by VWO</a>
+                                </li>
+
+                                <li>
+                                    <a href="/hc/en-us/related/click?data=BAh7CjobZGVzdGluYXRpb25fYXJ0aWNsZV9pZGwrCA2489JTADoYcmVmZXJyZXJfYXJ0aWNsZV9pZGwrCIp01NJTADoLbG9jYWxlSSIKZW4tdXMGOgZFVDoIdXJsSSJML2hjL2VuLXVzL2FydGljbGVzLzM2MDAyMTQ3MzI5My1EZWZpbmluZy1DdXN0b20tVmlzaXRvci1TZWdtZW50cy1pbi1WV08GOwhUOglyYW5raQo%3D--71d570bb0c2b634d4924980b1356c597fda63df9" rel="nofollow">Defining Custom Visitor Segments in VWO</a>
+                                </li>
+
+                            </ul>
+                        </section>
+
+
+
+                    </section>
+
+                </article>
+            </div>
+        </div>
+
+    </main>
+
+    <div class="js-modal modal" id="modal-form-experience" tabindex="-1" role="dialog">
+        <div class="js-modal-mask modal-mask"></div>
+        <div class="js-modal-box modal-content">
+            <button type="button" class="js-close-modal modal-close-btn" aria-label="Close modal" title="Close modal">
+                &#215;
+            </button>
+            <form id="js-custom-form" class="modal-form">
+                <h3>We're sorry to know about your experience. Please let us know what can we do to make this article more useful.</h3>
+                <div>
+                    <textarea placeholder="What were you looking for?" name="comments" id="comments" cols="30" rows="10"></textarea>
+                    <span class="error-message">A value for this field is required.</span>
+                </div>
+                <div>
+                    <label for="email"><b>Email</b></label>
+                    <input placeholder="Your email address here" type="text" name="email" id="email">
+                    <span class="error-message">A value for this field must be valid email.</span>
+                </div>
+                <p>
+                    This allows us to keep you informed on the status of your feedback. When collecting this information, we adhere to the Privacy Policy outlined <a href="https://vwo.com/privacy-policy/" target="_blank">here</a>.
+                </p>
+                <button type="submit" class="form-button">Submit</button>
+                <button type="button" class="js-close-modal form-button--secondary">No thanks</button>
+            </form>
+
+            <div class="modal-form-thankyou-message">
+                <svg width="209" height="233" viewBox="0 0 209 233" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><defs><filter x="-48.4%" y="-55%" width="196.8%" height="252%" filterUnits="objectBoundingBox" id="a"><feMorphology radius=".5" operator="dilate" in="SourceAlpha" result="shadowSpreadOuter1" /><feOffset dy="12" in="shadowSpreadOuter1" result="shadowOffsetOuter1" /><feGaussianBlur stdDeviation="12" in="shadowOffsetOuter1" result="shadowBlurOuter1" /><feColorMatrix values="0 0 0 0 0.830572539 0 0 0 0 0.878841223 0 0 0 0 0.927109906 0 0 0 1 0" in="shadowBlurOuter1" /></filter><path d="M87.877 57.255H1.997A2.002 2.002 0 010 55.253V2.002C.001.897.895.002 1.997 0h85.88a2.002 2.002 0 011.998 2.002v53.251a2.002 2.002 0 01-1.998 2.002z" id="b" /></defs><g fill="none" fill-rule="evenodd"><rect fill="#FFF" width="156" height="171" rx="2" /><path d="M153.386 170.965H1.997A2 2 0 010 168.963V2.002A2 2 0 011.997 0h151.39a2 2 0 011.996 2.002v166.961a2 2 0 01-1.997 2.002zM1.997.801A1.2 1.2 0 00.8 2v166.962a1.2 1.2 0 001.198 1.201h151.39a1.2 1.2 0 001.197-1.2V2.001A1.2 1.2 0 00153.386.8H1.997z" fill="#3F3D56" fill-rule="nonzero" /><g fill="#E9EBF4" fill-rule="nonzero"><path d="M136.234 19.603H18.797A1.8 1.8 0 0117 17.802 1.8 1.8 0 0118.797 16h117.437a1.8 1.8 0 011.797 1.802 1.8 1.8 0 01-1.797 1.801zM107.873 32.015H18.797A1.8 1.8 0 0117 30.214a1.8 1.8 0 011.797-1.802h89.076a1.8 1.8 0 011.798 1.802 1.8 1.8 0 01-1.798 1.801zM136.234 44.427H18.797A1.8 1.8 0 0117 42.626a1.8 1.8 0 011.797-1.802h117.437a1.8 1.8 0 011.797 1.802 1.8 1.8 0 01-1.797 1.801zM107.873 56.84H18.797A1.8 1.8 0 0117 55.037a1.8 1.8 0 011.797-1.802h89.076a1.8 1.8 0 011.798 1.802 1.8 1.8 0 01-1.798 1.801zM136.234 69.251H18.797A1.8 1.8 0 0117 67.45a1.8 1.8 0 011.797-1.802h117.437a1.8 1.8 0 011.797 1.802 1.8 1.8 0 01-1.797 1.801zM136.234 81.663H18.797A1.8 1.8 0 0117 79.862a1.8 1.8 0 011.797-1.802h117.437a1.8 1.8 0 011.797 1.802 1.8 1.8 0 01-1.797 1.801zM136.234 93.603H18.797A1.8 1.8 0 0117 91.802 1.8 1.8 0 0118.797 90h117.437a1.8 1.8 0 011.797 1.802 1.8 1.8 0 01-1.797 1.801zM107.873 106.015H18.797A1.8 1.8 0 0117 104.214a1.8 1.8 0 011.797-1.802h89.076a1.8 1.8 0 011.798 1.802 1.8 1.8 0 01-1.798 1.801zM136.234 118.427H18.797A1.8 1.8 0 0117 116.626a1.8 1.8 0 011.797-1.802h117.437a1.8 1.8 0 011.797 1.802 1.8 1.8 0 01-1.797 1.801zM107.873 130.84H18.797A1.8 1.8 0 0117 129.037a1.8 1.8 0 011.797-1.802h89.076a1.8 1.8 0 011.798 1.802 1.8 1.8 0 01-1.798 1.801z" /></g><g transform="translate(93.836 138)"><use fill="#000" filter="url(#a)" xlink:href="#b" /><use fill="#47B178" xlink:href="#b" /></g><g fill="#FFF" fill-rule="nonzero"><path d="M169.237 164.603h-61.28c-1.171 0-2.121-.806-2.121-1.801 0-.995.95-1.802 2.121-1.802h61.28c1.172 0 2.122.807 2.122 1.802s-.95 1.801-2.122 1.801zM169.237 155.603h-61.28c-1.171 0-2.121-.806-2.121-1.801 0-.995.95-1.802 2.121-1.802h61.28c1.172 0 2.122.807 2.122 1.802s-.95 1.801-2.122 1.801zM159.561 173.015h-51.927a1.8 1.8 0 01-1.798-1.801 1.8 1.8 0 011.798-1.802h51.927a1.8 1.8 0 011.798 1.802 1.8 1.8 0 01-1.798 1.801zM130.532 182.015h-23.87c-.456 0-.826-.806-.826-1.801 0-.995.37-1.802.826-1.802h23.87c.457 0 .827.807.827 1.802s-.37 1.801-.827 1.801z" /></g></g></svg>
+                <h3>Thank you for your feedback.</h3>
+            </div>
+            <div class="modal-form-error-message">
+                There is some technical error. Please try after some time or contact us at <a href="mailto:support@vwo.com">support@vwo.com</a>
+            </div>
+
+        </div>
+    </div>
+
+
+    <footer class="Bgc(#fafafa)">
+        <div class="Maw(1200px) M(a) Px(16px) Pt(100px) Pb(50px)">
+
+            <div class="D(f)--md print-hide Mb(30px)--md Mb(70px)">
+                <div class="W(2/12)--lg Mb(40px) Mb(0)--md Px(10px) Bxz(bb) Fxg(1)">
+                    <h4 class="M(0) Tt(u) Fz($font-size-14)">Products</h4>
+                    <ul class="D(b)--md D(f) Flw(w) List(n) Mt(10px) Mb(0) P(0) Fz($font-size-14)">
+                        <li class="Mb(6px) D(f) Ai(c) Cnt(noq)::a D(n)::a--md D(n):lc::a D(if)::a W(1px)::a H(12px)::a Mx(10px)::a Bgc(#5d616a)::a"><a href="https://vwo.com/testing/" class="Td(n) D(if) Ai(c) C(#5d616a) C($color-black):h Td(u):h">VWO Testing</a></li>
+                        <li class="Mb(6px) D(f) Ai(c) Cnt(noq)::a D(n)::a--md D(n):lc::a D(if)::a W(1px)::a H(12px)::a Mx(10px)::a Bgc(#5d616a)::a"><a href="https://vwo.com/insights/" class="Td(n) D(if) Ai(c) C(#5d616a) C($color-black):h Td(u):h">VWO Insights</a></li>
+                        <li class="Mb(6px) D(f) Ai(c) Cnt(noq)::a D(n)::a--md D(n):lc::a D(if)::a W(1px)::a H(12px)::a Mx(10px)::a Bgc(#5d616a)::a"><a href="https://vwo.com/fullstack/" class="Td(n) D(if) Ai(c) C(#5d616a) C($color-black):h Td(u):h">VWO FullStack</a></li>
+                        <li class="Mb(6px) D(f) Ai(c) Cnt(noq)::a D(n)::a--md D(n):lc::a D(if)::a W(1px)::a H(12px)::a Mx(10px)::a Bgc(#5d616a)::a"><a href="https://vwo.com/engage/" class="Td(n) D(if) Ai(c) C(#5d616a) C($color-black):h Td(u):h">VWO Engage</a></li>
+                        <li class="Mb(6px) D(f) Ai(c) Cnt(noq)::a D(n)::a--md D(n):lc::a D(if)::a W(1px)::a H(12px)::a Mx(10px)::a Bgc(#5d616a)::a"><a href="https://vwo.com/plan/" class="Td(n) D(if) Ai(c) C(#5d616a) C($color-black):h Td(u):h">VWO Plan</a></li>
+                        <li class="Mb(6px) D(f) Ai(c) Cnt(noq)::a D(n)::a--md D(n):lc::a D(if)::a W(1px)::a H(12px)::a Mx(10px)::a Bgc(#5d616a)::a"><a href="https://vwo.com/services/" class="Td(n) D(if) Ai(c) C(#5d616a) C($color-black):h Td(u):h">VWO Services</a></li>
+                    </ul>
+                </div>
+                <div class="Mb(40px) Mb(0)--md Px(10px) Bxz(bb) Fxg(1)">
+                    <h4 class="M(0) Tt(u) Fz($font-size-14)">Compare</h4>
+                    <ul class="D(b)--md D(f) Flw(w) List(n) Mt(10px) Mb(40px) P(0) Fz($font-size-14)">
+                        <li class="Mb(6px) D(f) Ai(c) Cnt(noq)::a D(n)::a--md D(n):lc::a D(if)::a W(1px)::a H(12px)::a Mx(10px)::a Bgc(#5d616a)::a"><a href="https://vwo.com/compare/optimizely/" class="Td(n) D(if) Ai(c) C(#5d616a) C($color-black):h Td(u):h">VWO vs. Optimizely</a></li>
+                        <li class="Mb(6px) D(f) Ai(c) Cnt(noq)::a D(n)::a--md D(n):lc::a D(if)::a W(1px)::a H(12px)::a Mx(10px)::a Bgc(#5d616a)::a"><a href="https://vwo.com/compare/google-optimize/" class="Td(n) D(if) Ai(c) C(#5d616a) C($color-black):h Td(u):h">VWO vs. Google Optimize</a></li>
+                    </ul>
+                    <h4 class="M(0) Tt(u) Fz($font-size-14)">Popular Guides</h4>
+                    <ul class="D(b)--md D(f) Flw(w) List(n) Mt(10px) Mb(0) P(0) Fz($font-size-14)">
+                        <li class="Mb(6px) D(f) Ai(c) Cnt(noq)::a D(n)::a--md D(n):lc::a D(if)::a W(1px)::a H(12px)::a Mx(10px)::a Bgc(#5d616a)::a"><a href="https://vwo.com/conversion-rate-optimization/" class="Td(n) D(if) Ai(c) C(#5d616a) C($color-black):h Td(u):h">Conversion Rate Optimization</a></li>
+                        <li class="Mb(6px) D(f) Ai(c) Cnt(noq)::a D(n)::a--md D(n):lc::a D(if)::a W(1px)::a H(12px)::a Mx(10px)::a Bgc(#5d616a)::a"><a href="https://vwo.com/ab-testing/" class="Td(n) D(if) Ai(c) C(#5d616a) C($color-black):h Td(u):h">A/B Testing</a></li>
+                        <li class="Mb(6px) D(f) Ai(c) Cnt(noq)::a D(n)::a--md D(n):lc::a D(if)::a W(1px)::a H(12px)::a Mx(10px)::a Bgc(#5d616a)::a"><a href="https://vwo.com/push-notifications/" class="Td(n) D(if) Ai(c) C(#5d616a) C($color-black):h Td(u):h">Push Notifications</a></li>
+                        <li class="Mb(6px) D(f) Ai(c) Cnt(noq)::a D(n)::a--md D(n):lc::a D(if)::a W(1px)::a H(12px)::a Mx(10px)::a Bgc(#5d616a)::a"><a href="https://vwo.com/website-personalization/" class="Td(n) D(if) Ai(c) C(#5d616a) C($color-black):h Td(u):h">Website Personalization</a></li>
+                        <li class="Mb(6px) D(f) Ai(c) Cnt(noq)::a D(n)::a--md D(n):lc::a D(if)::a W(1px)::a H(12px)::a Mx(10px)::a Bgc(#5d616a)::a"><a href="https://vwo.com/website-heatmap/" class="Td(n) D(if) Ai(c) C(#5d616a) C($color-black):h Td(u):h">Website Heatmaps</a></li>
+                        <li class="Mb(6px) D(f) Ai(c) Cnt(noq)::a D(n)::a--md D(n):lc::a D(if)::a W(1px)::a H(12px)::a Mx(10px)::a Bgc(#5d616a)::a"><a href="https://vwo.com/server-side-testing/" class="Td(n) D(if) Ai(c) C(#5d616a) C($color-black):h Td(u):h">Server Side Testing</a></li>
+                        <li class="Mb(6px) D(f) Ai(c) Cnt(noq)::a D(n)::a--md D(n):lc::a D(if)::a W(1px)::a H(12px)::a Mx(10px)::a Bgc(#5d616a)::a"><a href="https://vwo.com/form-analytics/" class="Td(n) D(if) Ai(c) C(#5d616a) C($color-black):h Td(u):h">Web Form Analytics</a></li>
+                    </ul>
+                </div>
+                <div class="W(2/12)--lg Mb(40px) Mb(0)--md Px(10px) Bxz(bb) Fxg(1)">
+                    <h4 class="M(0) Tt(u) Fz($font-size-14)">Resources</h4>
+                    <ul class="D(b)--md D(f) Flw(w) List(n) Mt(10px) Mb(0) P(0) Fz($font-size-14)">
+                        <li class="Mb(6px) D(f) Ai(c) Cnt(noq)::a D(n)::a--md D(n):lc::a D(if)::a W(1px)::a H(12px)::a Mx(10px)::a Bgc(#5d616a)::a"><a href="https://vwo.com/blog/" class="Td(n) D(if) Ai(c) C(#5d616a) C($color-black):h Td(u):h">Blog</a></li>
+                        <li class="Mb(6px) D(f) Ai(c) Cnt(noq)::a D(n)::a--md D(n):lc::a D(if)::a W(1px)::a H(12px)::a Mx(10px)::a Bgc(#5d616a)::a"><a href="https://vwo.com/success-stories/" class="Td(n) D(if) Ai(c) C(#5d616a) C($color-black):h Td(u):h">Success Stories</a></li>
+                        <li class="Mb(6px) D(f) Ai(c) Cnt(noq)::a D(n)::a--md D(n):lc::a D(if)::a W(1px)::a H(12px)::a Mx(10px)::a Bgc(#5d616a)::a"><a href="https://vwo.com/ebooks/" class="Td(n) D(if) Ai(c) C(#5d616a) C($color-black):h Td(u):h">eBooks</a></li>
+                        <li class="Mb(6px) D(f) Ai(c) Cnt(noq)::a D(n)::a--md D(n):lc::a D(if)::a W(1px)::a H(12px)::a Mx(10px)::a Bgc(#5d616a)::a"><a href="https://vwo.com/webinars/" class="Td(n) D(if) Ai(c) C(#5d616a) C($color-black):h Td(u):h">Webinars</a></li>
+                        <li class="Mb(6px) D(f) Ai(c) Cnt(noq)::a D(n)::a--md D(n):lc::a D(if)::a W(1px)::a H(12px)::a Mx(10px)::a Bgc(#5d616a)::a"><a href="https://vwo.com/glossary/" class="Td(n) D(if) Ai(c) C(#5d616a) C($color-black):h Td(u):h">Glossary</a></li>
+                    </ul>
+                </div>
+                <div class="Mb(40px) Mb(0)--md Px(10px) Bxz(bb) Fxg(1)">
+                    <div class="Mb(40px)">
+                        <h4 class="M(0) Tt(u) Fz($font-size-14)">Get Help</h4>
+                        <ul class="D(b)--md D(f) Flw(w) List(n) Mt(10px) Mb(0) P(0) Fz($font-size-14)">
+                            <li class="Mb(6px) D(f) Ai(c) Cnt(noq)::a D(n)::a--md D(n):lc::a D(if)::a W(1px)::a H(12px)::a Mx(10px)::a Bgc(#5d616a)::a"><a href="https://help.vwo.com/hc/en-us" class="Td(n) D(if) Ai(c) C(#5d616a) C($color-black):h Td(u):h">Knowledge Base</a></li>
+                        </ul>
+                    </div>
+                    <h4 class="M(0) Tt(u) Fz($font-size-14)">Free Tools</h4>
+                    <ul class="D(b)--md D(f) Flw(w) List(n) Mt(10px) Mb(0) P(0) Fz($font-size-14)">
+                        <li class="Mb(6px) D(f) Ai(c) Cnt(noq)::a D(n)::a--md D(n):lc::a D(if)::a W(1px)::a H(12px)::a Mx(10px)::a Bgc(#5d616a)::a"><a href="https://vwo.com/tools/ab-test-siginficance-calculator/" class="Td(n) D(if) Ai(c) C(#5d616a) C($color-black):h Td(u):h">A/B Testing Significance Calculator</a></li>
+                        <li class="Mb(6px) D(f) Ai(c) Cnt(noq)::a D(n)::a--md D(n):lc::a D(if)::a W(1px)::a H(12px)::a Mx(10px)::a Bgc(#5d616a)::a"><a href="https://vwo.com/tools/ab-test-duration-calculator/" class="Td(n) D(if) Ai(c) C(#5d616a) C($color-black):h Td(u):h">A/B Testing Duration Calculator</a></li>
+                        <li class="Mb(6px) D(f) Ai(c) Cnt(noq)::a D(n)::a--md D(n):lc::a D(if)::a W(1px)::a H(12px)::a Mx(10px)::a Bgc(#5d616a)::a"><a href="https://vwo.com/tools/push-notification-roi-calculator/" class="Td(n) D(if) Ai(c) C(#5d616a) C($color-black):h Td(u):h">Web Push ROI Calculator</a></li>
+                        <li class="Mb(6px) D(f) Ai(c) Cnt(noq)::a D(n)::a--md D(n):lc::a D(if)::a W(1px)::a H(12px)::a Mx(10px)::a Bgc(#5d616a)::a"><a href="http://landingpageanalyzer.io" class="Td(n) D(if) Ai(c) C(#5d616a) C($color-black):h Td(u):h">Landing Page Analyzer</a></li>
+                    </ul>
+                </div>
+                <div class="Mb(30px) Mb(0)--md Px(10px)">
+                    <h4 class="M(0) Tt(u) Fz($font-size-14)">About Us</h4>
+                    <ul class="D(b)--md D(f) Flw(w) List(n) Mt(10px) Mb(0) P(0) Fz($font-size-14)">
+                        <li class="Mb(6px) D(f) Ai(c) Cnt(noq)::a D(n)::a--md D(n):lc::a D(if)::a W(1px)::a H(12px)::a Mx(10px)::a Bgc(#5d616a)::a"><a href="https://vwo.com/about/" class="Td(n) D(if) Ai(c) C(#5d616a) C($color-black):h Td(u):h">Our Company</a></li>
+                        <li class="Mb(6px) D(f) Ai(c) Cnt(noq)::a D(n)::a--md D(n):lc::a D(if)::a W(1px)::a H(12px)::a Mx(10px)::a Bgc(#5d616a)::a"><a href="https://wingify.com/careers/" class="Td(n) D(if) Ai(c) C(#5d616a) C($color-black):h Td(u):h">Careers</a></li>
+                        <li class="Mb(6px) D(f) Ai(c) Cnt(noq)::a D(n)::a--md D(n):lc::a D(if)::a W(1px)::a H(12px)::a Mx(10px)::a Bgc(#5d616a)::a"><a href="https://vwo.com/media-kit/" class="Td(n) D(if) Ai(c) C(#5d616a) C($color-black):h Td(u):h">Media Kit</a></li>
+                        <li class="Mb(6px) D(f) Ai(c) Cnt(noq)::a D(n)::a--md D(n):lc::a D(if)::a W(1px)::a H(12px)::a Mx(10px)::a Bgc(#5d616a)::a"><a href="https://vwo.com/partners/" class="Td(n) D(if) Ai(c) C(#5d616a) C($color-black):h Td(u):h">VWO Partners</a></li>
+                        <li class="Mb(6px) D(f) Ai(c) Cnt(noq)::a D(n)::a--md D(n):lc::a D(if)::a W(1px)::a H(12px)::a Mx(10px)::a Bgc(#5d616a)::a"><a href="https://vwo.com/contact-us/" class="Td(n) D(if) Ai(c) C(#5d616a) C($color-black):h Td(u):h">Contact Us</a></li>
+                    </ul>
+                </div>
+
+            </div>
+
+
+            <div class="D(f) print-hide Fld(r)--md Fld(c) Ai(c) Jc(c) Jc(sb)--md Bdc(#eaeff4)--md Bdbs(s)--md Bdts(s)--md Bdbw(1px)--md Bdtw(1px) Py(20px)--md Mb(20px) Flw(w)">
+                <!-- Certificates icons -->
+                <div class="D(f) Ai(c) Flw(w) Mb(70px) Mb(0)--md Jc(c) Jc(fs)--md">
+                    <div class="Flxg(1)--md Flxs(0) W(a)--md W(4/12)--xs W(6/12) Mb(20px) Mb(0)--md Mend(50px)--md">
+                        <a href="https://vwo.com/compliance/gdpr/" class="D(b) Ta(c) Op(0.4) Op(1):h">
+                            <img src="https://static.wingify.com/gcp/wp-content/themes/vwo/images/new-website/GDPR-ready.svg" alt="vwo gdpr ready badge" width="94">
+                        </a>
+                    </div>
+                    <div class="Flxg(1)--md Flxs(0) W(a)--md W(4/12)--xs W(6/12) Mb(20px) Mb(0)--md Mend(50px)--md">
+                        <a href="https://www.g2.com/vendors/wingify" class="D(b) Ta(c) Op(0.4) Op(1):h">
+                            <img src="https://static.wingify.com/gcp/wp-content/themes/vwo/images/new-website/g2crowd.svg" alt="vwo g2crowd badge" width="130">
+                        </a>
+                    </div>
+                    <div class="Flxg(1)--md Flxs(0) W(a)--md W(4/12)--xs W(6/12) Mb(20px) Mb(0)--md Mend(50px)--md">
+                        <a href="https://www.trustradius.com/products/vwo/reviews" class="D(b) Ta(c) Op(0.4) Op(1):h">
+                            <picture><img src="https://static.wingify.com/gcp/wp-content/themes/vwo/images/new-website/trustradius.png" alt="vwo trustradius badge" width="90"></picture>
+                        </a>
+                    </div>
+                    <div class="Flxg(1)--md Flxs(0) W(a)--md W(4/12)--xs W(6/12) Mb(20px) Mb(0)--md Mend(50px)--md">
+                        <a href="https://vwo.com/compliance/international-organization-standardization-certification/" class="D(b) Ta(c) Op(0.4) Op(1):h">
+                            <img src="https://static.wingify.com/gcp/wp-content/themes/vwo/images/new-website/ISO.svg" alt="vwo iso certification badge" width="125">
+                        </a>
+                    </div>
+                    <div class="Flxg(1)--md Flxs(0) W(a)--md W(4/12)--xs W(6/12) Mb(20px) Mb(0)--md">
+                        <a href="https://vwo.com/compliance/british-standard-institution-certification/" class="D(b) Ta(c) Op(0.4) Op(1):h">
+                            <img src="https://static.wingify.com/gcp/wp-content/themes/vwo/images/new-website/BS.svg" alt="vwo bs certification badge" width="110">
+                        </a>
+                    </div>
+                </div>
+                <!-- End Certificates icons -->
+                <!-- Social media icons -->
+                <div>
+                    <a href="https://www.linkedin.com/showcase/vwo/" target="_blank" class="D(ib) C(#a3a5aa) C($color-black):h" rel="nofollow noopener">
+                        <svg width="24" height="24">
+                            <use xlink:href="#icon-linkedin-type2"></use>
+                        </svg>
+                    </a>
+                    <a href="https://twitter.com/VWO" target="_blank" class="Mx(24px) D(ib) C(#a3a5aa) C($color-black):h" rel="nofollow noopener">
+                        <svg width="24" height="24">
+                            <use xlink:href="#icon-twitter-type2"></use>
+                        </svg>
+                    </a>
+                    <a href="https://www.facebook.com/vwoofficial" target="_blank" class="D(ib) C(#a3a5aa) C($color-black):h" rel="nofollow noopener">
+                        <svg width="24" height="24">
+                            <use xlink:href="#icon-facebook-type2"></use>
+                        </svg>
+                    </a>
+                </div>
+                <!-- End Social Media icons -->
+            </div>
+
+
+            <div class="D(f) Ai(c) Fld(r)--md Fld(c) Flw(w) Jc(sb) C(#5d616a)">
+                <div class="Ta(start)--md Ta(c)">
+                    <p class="C(#5d616a) D(ib)">
+                        <span>© </span>2020 Copyright
+                        <a href="https://wingify.com" class="Td(n) Td(u):h C(#5d616a) C($color-black):h">Wingify</a>. All rights reserved<br class="D(n)--md D(b)">
+                        <span class="D(ib)--md D(n)">|</span>
+                    </p>
+                    <div class="print-hide D(ib) Mstart(5px)">
+                        <a href="https://vwo.com/terms/" class="Td(n) Td(u):h C(#5d616a) C($color-black):h">Terms</a>
+                        <span>| </span>
+                        <a href="https://vwo.com/security/" class="Td(n) Td(u):h C(#5d616a) C($color-black):h">Security</a>
+                        <span>|</span>
+                        <a href="https://vwo.com/compliance/" class="Td(n) Td(u):h C(#5d616a) C($color-black):h">Compliance</a>
+                        <span>|</span>
+                        <a href="https://vwo.com/privacy-policy/" class="Td(n) Td(u):h C(#5d616a) C($color-black):h">Privacy</a>
+                        <span>|</span>
+                        <a href="https://vwo.com/opt-out/" class="Td(n) Td(u):h C(#5d616a) C($color-black):h">Opt-out</a>
+                    </div>
+                    <p></p>
+                </div>
+                <a href="https://wingify.com">
+                    <img alt="Wingify" src="https://static.wingify.com/gcp/wp-content/themes/vwo/images/new-website/logo_wingify.svg" width="94" height="28">
+                </a>
+            </div>
+
+        </div>
+    </footer>
+
+    <script>
+// Update Footer
+$.ajax({
+    url: "https://vwo.com/wp-content/cache/zendesk-footer.js?v=" + Math.random() ,
+    dataType: "jsonp",
+});
+function replaceFooter(data){
+    data = data.split("</style>");
+    style = data[0].replace("<style>", "");
+    if(style){
+        var css = document.createElement('style');
+        css.type = 'text/css';
+        if (css.styleSheet)
+            css.styleSheet.cssText = style;
+        else
+            css.appendChild(document.createTextNode(style));
+        /* Append style to the tag name */
+        document.getElementsByTagName("head")[0].appendChild(css);
+    }
+    if(data[1] && typeof data[1] != "undefined") {
+        jQuery("body > footer").replaceWith(data[1]);
+    }
+}
+    </script>
+
+
+    <!-- / -->
+
+
+    <script src="//static.zdassets.com/hc/assets/en-us.eae8afc918a13192e738.js"></script>
+    <script src="https://vwo.zendesk.com/auth/v2/host.js" data-brand-id="114094514233" data-return-to="https://help.vwo.com/hc/en-us/articles/360019424394-Allocate-Visitor-to-Sub-accounts-in-VWO" data-theme="hc" data-locale="en-us" data-auth-origin="114094514233,true,true"></script>
+
+    <script type="text/javascript">
+  /*
+
+    Greetings sourcecode lurker!
+
+    This is for internal Zendesk and legacy usage,
+    we don't support or guarantee any of these values
+    so please don't build stuff on top of them.
+
+  */
+
+  HelpCenter = {};
+  HelpCenter.account = {"subdomain":"vwo","environment":"production","name":"VWO"};
+  HelpCenter.user = {"identifier":"da39a3ee5e6b4b0d3255bfef95601890afd80709","email":null,"name":null,"role":"anonymous","avatar_url":"https://assets.zendesk.com/hc/assets/default_avatar.png","is_admin":false,"organizations":[],"groups":[]};
+  HelpCenter.internal = {"asset_url":"//static.zdassets.com/hc/assets/","web_widget_asset_composer_url":"https://static.zdassets.com/ekr/snippet.js","current_session":{"locale":"en-us","csrf_token":null,"shared_csrf_token":null},"settings":{},"usage_tracking":{"event":"article_viewed","data":"BAh7CDoLbG9jYWxlSSIKZW4tdXMGOgZFVDoPYXJ0aWNsZV9pZGwrCIp01NJTADoKX21ldGF7CzoPYWNjb3VudF9pZGkD9AEfOhNoZWxwX2NlbnRlcl9pZGwrCBopisYaADoNYnJhbmRfaWRsKwg5IJCQGgA6DHVzZXJfaWQwOhN1c2VyX3JvbGVfbmFtZUkiDkFOT05ZTU9VUwY7BlQ7AEkiCmVuLXVzBjsGVA==--65bea272be11fa2eded192f308a7d15ee3acc5ea","url":"https://help.vwo.com/hc/activity"},"current_record_id":"360019424394","current_record_url":"/hc/en-us/articles/360019424394-Allocate-Visitor-to-Sub-accounts-in-VWO","current_record_title":"Allocate Visitor to Sub-accounts in VWO","search_results_count":null,"current_text_direction":"ltr","current_brand":{"id":114094514233,"account_id":2032116,"name":"VWO","active":true,"deleted_at":null,"created_at":"2017-08-31T11:28:12Z","updated_at":"2020-10-28T11:22:33Z","route_id":1973901,"signature_template":"{{agent.signature}}"},"current_brand_url":"https://vwo.zendesk.com","current_host_mapping":"help.vwo.com","current_path":"/hc/en-us/articles/360019424394-Allocate-Visitor-to-Sub-accounts-in-VWO","authentication_domain":"https://vwo.zendesk.com","show_autocomplete_breadcrumbs":true,"user_info_changing_enabled":false,"has_user_profiles_enabled":false,"has_end_user_attachments":true,"user_aliases_enabled":false,"has_anonymous_kb_voting":true,"has_multi_language_help_center":true,"mobile_device":true,"mobile_site_enabled":false,"show_at_mentions":false,"embeddables_config":{"embeddables_web_widget":false,"embeddables_connect_ipms":false},"base_domain":"zendesk.com","answer_bot_subdomain":"static","manage_content_url":"https://help.vwo.com/hc/en-us","arrange_content_url":"https://help.vwo.com/hc/admin/arrange_contents?locale=en-us","general_settings_url":"https://help.vwo.com/hc/admin/general_settings?locale=en-us","user_segments_url":"https://vwo.zendesk.com/knowledge/user_segments?brand_id=114094514233","has_gather":true,"has_community_enabled":false,"has_community_badges":false,"has_community_post_content_tagging":false,"has_gather_content_tags":false,"has_guide_content_tags":false,"has_user_segments":true,"has_answer_bot_web_form_enabled":false,"has_answer_bot_web_form_modal_v2":false,"has_assign_badge_modal_v2":true,"has_edit_user_profile_v2":false,"has_change_password_modal_v2":false,"has_garden_modals":false,"billing_url":"/access/return_to?return_to=https%3A%2F%2Fvwo.zendesk.com%2Fadmin%2Fbilling%2Fsubscription","is_account_owner":false,"theming_cookie_key":"hc-da39a3ee5e6b4b0d3255bfef95601890afd807091-preview","is_preview":false,"has_alternate_templates":false,"arrange_articles_url":"https://vwo.zendesk.com/knowledge/arrange?brand_id=114094514233","article_verification_url":"https://vwo.zendesk.com/knowledge/verification?brand_id=114094514233","has_article_verification":false,"guide_language_settings_url":"https://help.vwo.com/hc/admin/language_settings?locale=en-us","docs_importer_url":"https://vwo.zendesk.com/knowledge/import_articles?brand_id=114094514233","content_tags_url":"https://vwo.zendesk.com/knowledge/content_tags?brand_id=114094514233","community_badges_url":"https://vwo.zendesk.com/knowledge/community_badges?brand_id=114094514233","community_settings_url":"https://vwo.zendesk.com/knowledge/community_settings?brand_id=114094514233","gather_plan_state":"subscribed","search_settings_url":"https://vwo.zendesk.com/knowledge/search_settings?brand_id=114094514233","has_multibrand_search_in_plan":false,"theming_api_version":1,"theming_settings":{"brand_color":"#e20072","hero_banner_color":"#fff5f7","brand_text_color":"#ffffff","text_color":"#07003A","link_color":"#0072ef","background_color":"#ffffff","heading_font":"-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif","text_font":"-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif","logo":"//theme.zdassets.com/theme_assets/2032116/f1389e984f800816651fd6fe296b32ed4940983a.svg","favicon":"//theme.zdassets.com/theme_assets/2032116/2a5fb5fd37836477b8b979fc6b06502af8811efd.png","homepage_background_image":"//theme.zdassets.com/theme_assets/2032116/65551bfd8d2acd8b7c764b54f4501604f2e817de.gif","community_background_image":"//theme.zdassets.com/theme_assets/2032116/ea0fc49e94c74884940bd530924916ea87035a5f.svg","community_image":"//theme.zdassets.com/theme_assets/2032116/e58c5e8c3ebf94cbbc4d3669def0adbd7d0ff479.svg","instant_search":true,"scoped_kb_search":true,"scoped_community_search":true,"show_recent_activity":true,"show_articles_in_section":true,"show_article_author":true,"show_article_comments":false,"show_follow_article":true,"show_recently_viewed_articles":true,"show_related_articles":true,"show_article_sharing":true,"show_follow_section":true,"show_follow_post":true,"show_post_sharing":true,"show_follow_topic":true},"has_pci_credit_card_custom_field":false,"current_brand_id":114094514233,"help_center_restricted":false,"current_brand_active":true,"is_assuming_someone_else":false,"flash_messages":[],"user_photo_editing_enabled":true,"has_end_user_apps":true,"has_request_list_custom_fields":false,"has_docs_importer":false,"has_sunco_widget_kill_switch":false,"gather_user_image_upload_via_aus":false,"user_preferred_locale":"en-us","has_end_user_session_renewal":true,"has_reload_page_after_changing_password":true,"has_user_session_cookie_enabled":false,"version":"v21864"};
+    </script>
+
+    <script src="//static.zdassets.com/hc/assets/moment-4ef0d82f9fc65c8a28f659aa3430955f.js"></script>
+    <script src="//static.zdassets.com/hc/assets/hc_enduser-47b80ecb73fdb76aefce34bb84751800.js"></script>
+
+</body>
+</html>
